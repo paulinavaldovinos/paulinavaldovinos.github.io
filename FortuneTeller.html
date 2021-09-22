@@ -1,26 +1,23 @@
-<!DOCTYPE html>
+<head>
+<script>
+  var yourSpouse = ["Liam", "Jose", "Fabian"];
+  var yourCity   = ["Dallas", "Los Angeles", "Ohio"];
+  var yourJob    = ["Teacher", "Singer", "Chef"];
+  var yourKids   = [1,2,3];
+  function flipCoin(max) {
+    return Math.floor(Math.random() * Math.floor(max))
+  }
+</script>
+</head>
+
 <html>
-<title>The Fortune Teller</title>
-<body>
-	<script>
-		var children = 3;
-		var partner = "Ariana";
-		var location = "Los Angeles";
-		var job = "Tattoo Artist";
-		document.write("You will be a " + job + " in " + location + ", and married to" + partner + "with " + children + "kids.");
-	</script>
-
-	<script>
-	//part 2
-	function tellFuture(a,b,c,d){
-		var future = "I will be a " + d " in" + c + " ,and married to " + b + " with " + a + " kids."
-		document.write(future);
-
-	}
-	</script>
-
-	<p><script>tellFuture(3, "Bob", "Ohio", "Acountant");</script></p>
-	<p><script>tellFuture(4, "Thomas", "New Jersey", "Dentist");</script></p>
-	<p><script>tellFuture(1, "Erick", "Calfornia", "Comedian");</script></p>
-</body>
+  <body>
+    <h1>The Fortune Teller</h1>
+    <p>Your future!!</p>
+    <script>
+      fortune = flipCoin(3) + 1;
+      document.write("<p>In the future, you will be married to " + yourSpouse[fortune] + " and live in " + yourCity[fortune] + "!!</p>");
+      document.write("<p>You will work as a " + yourJob[fortune] + " and have " + yourKids[fortune] + " kids!</p>");
+    </script>
+  </body>
 </html>
